@@ -1,0 +1,5 @@
+@mixin large {
+  @media (max-width: (1439px)) {
+    @content;
+  }
+}
