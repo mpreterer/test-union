@@ -1,0 +1,135 @@
+@import "../../styles/mixins";
+
+.team-page {
+  width: 1135px;
+  background-color: #f9fafb;
+  border-radius: 15px;
+  margin: 53px 100px 53px 105px;
+  padding-bottom: 34px;
+
+  &__functional-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 19px 29px 18px 29px;
+    border-bottom: 1px solid #eaeaef;
+    user-select: none;
+
+    @include large {
+      flex-direction: column;
+      padding: 19px 15px 18px 15px;
+    }
+  }
+
+  &__form-add-user {
+    display: flex;
+    flex-direction: column;
+    padding: 45px 10px 20px 10px;
+    border-radius: 10px;
+    background-color: #eaeaef;
+  }
+
+  &__input-info-user {
+    border: 1px solid #c1c1cb;
+    outline: none;
+    padding: 8px 13px;
+    border-radius: 10px;
+    color: #9494a0;
+    margin-bottom: 5px;
+
+    &::placeholder {
+      color: #9494a0;
+    }
+  }
+
+  &__add-user {
+    max-width: 345px;
+    min-width: 218px;
+    border-radius: 10px;
+    background-color: #32c076;
+    color: #fff;
+    padding: 7px 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    @media (max-width: 768px) {
+      max-width: 100%;
+    }
+  }
+
+  &__container-check-list {
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 15px;
+  }
+
+  &__title {
+    color: #424f5e;
+
+    @include large {
+      margin-left: 30px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    width: 100%;
+
+    @include large {
+      flex-direction: column;
+    }
+  }
+
+  &__search-container {
+    width: 100%;
+    margin-right: 10px;
+    margin-left: 96px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      width: 16px;
+      height: 16px;
+      background-image: url("../../assets/images/search.svg");
+      background-repeat: no-repeat;
+    }
+
+    @include large {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+
+  &__search {
+    width: 100%;
+    border: 1px solid #c1c1cb;
+    outline: none;
+    padding: 8px 13px;
+    border-radius: 10px;
+    color: #9494a0;
+
+    &::placeholder {
+      color: #9494a0;
+    }
+
+    @include large {
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 7px;
+    }
+  }
+
+  &__users-list {
+    list-style: none;
+  }
+
+  @include large {
+    width: auto;
+    margin: 0;
+  }
+}
